@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecte-se Conosco | Rede Amazônica</title>
+    <meta name="description"
+        content="Acesse todos os canais oficiais, portais e redes da Rede Amazônica em um só lugar.">
+
+    <!-- Google Fonts: Outfit e Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Elementos Flutuantes de Fundo para o Efeito Premium -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <div class="container">
+        <!-- Barra de Ações (Compartilhar e Tema) -->
+        <header class="action-bar">
+            <button id="share-btn" class="icon-btn" title="Copiar Link" aria-label="Copiar link da página">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2">
+                    <circle cx="18" cy="5" r="3" />
+                    <circle cx="6" cy="12" r="3" />
+                    <circle cx="18" cy="19" r="3" />
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                </svg>
+            </button>
+            <button id="theme-toggle" class="icon-btn" title="Alternar Tema" aria-label="Alternar modo escuro e claro">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun sun-icon">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-moon moon-icon">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Perfil Principal -->
+        <section class="profile-card">
+            <div class="avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <!-- Div com iniciais caso não tenha imagem, ou imagem padrão se configurada -->
+                <div class="avatar-fallback">RA</div>
+                <img src="logo.png" alt="Logo Rede Amazônica" class="avatar-image" onerror="this.style.display='none';">
+            </div>
+
+            <div class="profile-info">
+                <h1 class="profile-name">
+                    TI Rede Amazônica
+                    <span class="verified-badge" title="Canal Oficial">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="badge-icon">
+                            <path
+                                d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.78 4.78 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.78 4 4 0 0 1 0-6.74z"
+                                fill="var(--color-accent-start)" stroke="none" />
+                            <path d="m9 12 2 2 4-4" fill="none" stroke="#ffffff" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </h1>
+                <p class="profile-tagline">@ti.redeamazonica</p>
+                <p class="profile-bio">Painel unificado de acesso rápido aos sistemas oficiais, planilhas e formulários
+                    de uso diário pela equipe de TI.</p>
+            </div>
+        </section>
+
+        <!-- Barra de Busca -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input type="text" id="search-input" placeholder="Buscar ferramenta ou recurso... (aperte '/')"
+                    autocomplete="off" aria-label="Buscar ferramenta">
+                <button id="clear-search-btn" class="clear-search-btn" aria-label="Limpar busca" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+                <kbd class="search-kbd">/</kbd>
+            </div>
+        </div>
+
+        <!-- Botão Toggle Lista -->
+        <button id="toggle-list-btn" class="toggle-list-btn" aria-label="Revelar ou ocultar lista de links">
+            <span class="toggle-list-label">Ver todos</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-list-chevron">
+                <path d="m6 9 6 6 6-6" />
+            </svg>
+        </button>
+
+        <!-- Lista de Links Principais -->
+        <main class="links-container">
+            <!-- Link 1: GLPI -->
+            <a href="http://glpi.redeamazonica.com.br/index.php?noAUTO=1" target="_blank" rel="noopener noreferrer"
+                class="link-card featured">
+                <div class="link-glow"></div>
+                <div class="link-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-life-buoy">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m4.93 4.93 4.24 4.24" />
+                        <path d="m14.83 9.17 4.24-4.24" />
+                        <path d="m14.83 14.83 4.24 4.24" />
+                        <path d="m9.17 14.83-4.24 4.24" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <h2 class="link-title">GLPI</h2>
+                    <p class="link-description">Controle de Chamados, Equipamentos e Inventário de TI.</p>
+                </div>
+                <div class="link-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Link 2: Check-List Diário Técnico -->
+            <a href="https://form.jotform.com/261673639092061" target="_blank" rel="noopener noreferrer"
+                class="link-card">
+                <div class="link-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clipboard-list">
+                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                        <path d="M12 11h4" />
+                        <path d="M12 16h4" />
+                        <path d="M8 11h.01" />
+                        <path d="M8 16h.01" />
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <h2 class="link-title">Check-List Diário Técnico</h2>
+                    <p class="link-description">Formulário diário para verificação e reporte técnico.</p>
+                </div>
+                <div class="link-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Link 3: Login ANYDESK -->
+            <a href="https://docs.google.com/spreadsheets/d/1noClvl3hXjroxFktJNs1DF1iiVmIElA-W0iaGDjjtOk/edit?gid=0#gid=0"
+                target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-file-spreadsheet">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                        <path d="M8 13h8" />
+                        <path d="M8 17h8" />
+                        <path d="M12 9v13" />
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <h2 class="link-title">Login ANYDESK</h2>
+                    <p class="link-description">Lista de credenciais para logins e acessos diversos.</p>
+                </div>
+                <div class="link-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Link 4: CBN Amazônica -->
+            <a href="https://cbnamazonia.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-radio">
+                        <circle cx="12" cy="12" r="2" />
+                        <path d="M16.2 7.8a6 6 0 0 1 0 8.4" />
+                        <path d="M19 5a10 10 0 0 1 0 14" />
+                        <path d="M7.8 16.2a6 6 0 0 1 0-8.4" />
+                        <path d="M5 19a10 10 0 0 1 0-14" />
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <h2 class="link-title">CBN Amazônica</h2>
+                    <p class="link-description">Portal oficial e transmissão ao vivo da Rádio CBN.</p>
+                </div>
+                <div class="link-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Link 5: ANEWS -->
+            <a href="http://anews.redeamazonica.com.br/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper">
+                        <path
+                            d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+                        <path d="M18 14h-8" />
+                        <path d="M15 18h-5" />
+                        <path d="M10 6h8v4h-8V6Z" />
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <h2 class="link-title">ANEWS AM</h2>
+                    <p class="link-description">Portal de notícias ANEWS Amazonas da Rede Amazônica.</p>
+                </div>
+                <div class="link-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </a>
+            <!-- Mensagem sem resultados -->
+            <p class="no-results-msg" id="no-results">Nenhum resultado encontrado.</p>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p class="copyright">&copy; 2026 Rede Amazônica. Todos os direitos reservados.</p>
+            <p class="powered-by">Powered by <span class="brand-highlight">Tecnologia REDEAM</span></p>
+        </footer>
+    </div>
+
+    <!-- Script de Notificação (Toast para copiar link) -->
+    <div id="toast" class="toast-notification">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="m9 12 2 2 4-4" />
+        </svg>
+        <span>Link copiado para a área de transferência!</span>
+    </div>
+
+    <!-- Scripts do Aplicativo -->
+    <script src="script.js"></script>
+</body>
+
+</html>
